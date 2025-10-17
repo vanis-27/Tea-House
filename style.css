@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #f8fff5, #d8f2d1);
+  color: #445e39;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+header {
+  margin-top: 40px;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.6em;
+  color: #557b45;
+}
+
+.subtitle {
+  color: #6b8353;
+  font-size: 1.1em;
+  margin-top: -10px;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 40px auto;
+  gap: 20px;
+  max-width: 1000px;
+}
+
+.item {
+  background-color: #f5fff4;
+  border: 3px solid #b8e4b3;
+  border-radius: 20px;
+  width: 230px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(138, 186, 126, 0.3);
+}
+
+.item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(85, 123, 69, 0.3);
+}
+
+.item img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.item h2 {
+  font-family: 'Pacifico', cursive;
+  color: #557b45;
+}
+
+.item p {
+  font-size: 0.95em;
+  color: #6b8353;
+}
+
+.special {
+  border-color: #aee1af;
+  background-color: #e9fbea;
+  cursor: pointer;
+}
+
+/* Popup Styling */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(90, 120, 85, 0.5);
+}
+
+.popup-content {
+  background-color: #f5fff4;
+  border: 3px solid #b8e4b3;
+  border-radius: 20px;
+  padding: 30px;
+  width: 80%;
+  max-width: 400px;
+  margin: 100px auto;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(85, 123, 69, 0.3);
+  animation: fadeIn 0.5s ease;
+  position: relative;
+}
+
+#close-popup {
+  float: right;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #557b45;
+}
+
+footer {
+  margin: 40px 0;
+  font-size: 0.9em;
+  color: #6b8353;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Confetti */
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background-color: #aee1af;
+  animation: fall 3s linear forwards;
+  border-radius: 50%;
+  z-index: 20;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
